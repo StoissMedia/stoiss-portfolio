@@ -770,3 +770,73 @@ h3 { font-size: 1.4rem; }
     margin-bottom: 34px;
   }
 }
+
+
+.gaming-highlight-sub {
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.gaming-team-link {
+  width: fit-content;
+  margin-top: 4px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 750;
+}
+
+.gaming-team-link:hover {
+  text-decoration: underline;
+}
+
+.gaming-highlight-divider {
+  height: 1px;
+  margin: 12px 0 6px;
+  background: var(--line);
+}
+
+.dirge-team-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.022);
+}
+
+.dirge-team-note strong {
+  font-size: .94rem;
+}
+
+.dirge-team-note span {
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.dirge-team-note a {
+  margin-left: auto;
+  color: var(--text);
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 750;
+}
+
+.dirge-team-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 620px) {
+  .dirge-team-note {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dirge-team-note a {
+    margin-left: 0;
+  }
+}
