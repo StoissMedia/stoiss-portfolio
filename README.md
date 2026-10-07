@@ -13,6 +13,18 @@ Replace the repo contents with these files and push. `CNAME` keeps the custom do
 3. **Check the claims:** "reply within a day", free-test sizes.
 4. `pricing-mockup.html` is a private draft (it has your hourly notes). It is NOT in the upload zip; don't push it.
 
+## Pages (v22)
+- `index.html`: home (hero, services, proof, rates teaser, about, FAQ, contact)
+- `video-editing.html`: full editing rates and scope rules
+- `voiceover.html`: voice page (rates placeholder: "quoted per project")
+- `localization.html`: localization & LQA (rates placeholder: "quoted per project")
+- Shared styles in `styles.css`. Header, footer and contact form are repeated on every page; edit all four if you change them.
+
+## Still to fill in
+- Voiceover and localization rates (currently "quoted per project").
+- Game logos: save as `assets/logos/<name>.png` (names in each `data-logo` attribute) and swap the text placeholder for an `<img>`.
+- Voice reel / demos: MP3s in `assets/audio/` (slots marked in index.html and voiceover.html).
+
 ## Common edits
 - **Add a video:** copy a `<li class="card">` block, change `data-id` and the two `i.ytimg.com/vi/<ID>/`
   image URLs, then update channel and title.
