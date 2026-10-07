@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=22b">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,7 +33,7 @@
     <nav class="nav" aria-label="Main">
       <a href="video-editing.html" aria-current="page">Video editing</a>
       <a href="voiceover.html">Voiceover</a>
-      <a href="localization.html">Localization</a>
+      <a href="localization.html">Translation</a>
       <a href="index.html#about">About</a>
     </nav>
     <a class="btn btn-sm" href="#contact">Get in touch</a>
@@ -59,7 +59,7 @@
       <p class="label">Selected edits</p>
       <h2>Published work</h2>
       <p class="sec-sub">Published videos, edited for creators and for my own channel.</p>
-      <p class="nda"><span aria-hidden="true">◆</span>Most of my client work is under NDA, so these are the pieces I’m free to share publicly. More samples can be shown privately on request.</p>
+      <p class="nda"><span aria-hidden="true">◆</span>Most of my client work is under NDA, and I honor that fully. These are the published pieces I’m free to show, and your work gets the same protection.</p>
     </header>
 
     <article class="feature-video">
@@ -248,16 +248,7 @@
       <li><span class="n">11</span><div><h4>Longer projects, tailored quote</h4><p>Videos over 40 minutes, documentaries and long breakdowns get a custom quote, so the price matches the project.</p></div></li>
     </ol>
 
-    <div class="offer">
-      <div>
-        <p class="label">First time working together?</p>
-        <h3>Ask for a short free test</h3>
-        <p>A 30-second read, a one-minute edit, or 200 words of translation, on your own material. You see the quality before you commit.</p>
-      </div>
-      <a class="btn" href="#contact" data-service="Free test">Request a test</a>
-    </div>
-
-    <p class="other-rates"><span class="label">Also offered</span><a class="link" href="voiceover.html">Voiceover</a> &nbsp;·&nbsp; <a class="link" href="localization.html">Localization &amp; LQA</a></p>
+    <p class="other-rates"><span class="label">Also offered</span><a class="link" href="voiceover.html">Voiceover</a> &nbsp;·&nbsp; <a class="link" href="localization.html">Translation &amp; localization</a></p>
   </div>
 </section>
 
@@ -268,11 +259,11 @@
       <p class="label">Contact</p>
       <h2>Have a project <em>in mind?</em></h2>
       <p class="lead">Tell me what you need. I usually reply within a day with questions or a quote.</p>
-      <ol class="start">
-        <li><span>1</span>Drop your footage in a shared Drive folder.</li>
-        <li><span>2</span>Add a few notes and the timestamps you want.</li>
-        <li><span>3</span>I take it from there.</li>
-      </ol>
+      <div class="start" role="list">
+        <p role="listitem"><span aria-hidden="true">1</span>Drop your footage in a shared Drive folder.</p>
+        <p role="listitem"><span aria-hidden="true">2</span>Add a few notes and the timestamps you want.</p>
+        <p role="listitem"><span aria-hidden="true">3</span>I take it from there.</p>
+      </div>
       <p class="start-note">No meeting needed. Prefer to talk first? A quick 15-minute intro call is always an option.</p>
       <a class="mail" href="mailto:stoissbusiness@pm.me">stoissbusiness@pm.me</a>
       <div class="hire">
@@ -296,8 +287,7 @@
           <option value="" disabled selected>Choose a service</option>
           <option>Video editing</option>
           <option>Voiceover</option>
-          <option>Localization / translation</option>
-          <option>Free test</option>
+          <option>Translation / localization</option>
           <option>Something else</option>
         </select>
       </label>
