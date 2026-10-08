@@ -365,6 +365,13 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 
 .price.t-soft-price{font-family:var(--serif);font-weight:400;font-size:2.1rem;letter-spacing:-.01em}
 
+.demos{display:grid;gap:12px;margin-top:28px}
+.demos-2{grid-template-columns:1fr 1fr;margin-top:0}
+.demo{margin:0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+.demo .label{margin-bottom:10px}
+.demo audio{display:block;width:100%;height:40px;color-scheme:dark}
+@media (max-width:720px){.demos-2{grid-template-columns:1fr}}
+
 /* Footer */
 .footer{border-top:1px solid var(--line);padding:28px 0}
 .footer-in{display:flex;align-items:center;gap:28px;flex-wrap:wrap}

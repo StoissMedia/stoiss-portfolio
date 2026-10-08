@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -91,11 +91,10 @@
         <div><dt>Styles</dt><dd>Commercial · Narration · Audiobook · Character · Conversational</dd></div>
         <div><dt>Setup</dt><dd>Professional home setup, remote delivery</dd></div>
       </dl>
-      <!-- VOICE DEMOS: put MP3s in assets/audio/ and swap each slot for <audio controls preload="none" src="assets/audio/FILE.mp3"></audio>. -->
-      <div class="demo-slots">
-        <div class="reel-slot sm"><span class="reel-play" aria-hidden="true"></span><div><p class="label">English · Commercial</p><p>Demo coming soon</p></div></div>
-        <div class="reel-slot sm"><span class="reel-play" aria-hidden="true"></span><div><p class="label">Danish · Commercial</p><p>Demo coming soon</p></div></div>
-        <div class="reel-slot sm"><span class="reel-play" aria-hidden="true"></span><div><p class="label">Character · Games</p><p>Demo coming soon</p></div></div>
+      <!-- VOICE DEMOS: MP3s live in assets/audio/. Replace a file with the same name to update a demo. -->
+      <div class="demos">
+        <figure class="demo"><figcaption class="label">Intro · American English</figcaption><audio controls preload="metadata" src="assets/audio/intro-en.mp3"></audio></figure>
+        <figure class="demo"><figcaption class="label">Intro · Danish</figcaption><audio controls preload="metadata" src="assets/audio/intro-da.mp3"></audio></figure>
       </div>
 
       <div class="actions">
