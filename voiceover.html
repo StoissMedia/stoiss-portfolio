@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=22d">
+  <link rel="stylesheet" href="styles.css?v=22g">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -123,9 +123,7 @@
       </div>
     </div>
 
-    <!-- FORM: create a free form at formspree.io and paste its ID in place of YOUR_FORM_ID.
-         Until then, submitting opens the visitor's email app with everything pre-filled. -->
-    <form class="form" id="inquiry" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="form" id="inquiry" action="mailto:stoissbusiness@pm.me" method="post" enctype="text/plain">
       <div class="row">
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>Email<input name="email" type="email" required autocomplete="email"></label>
@@ -152,8 +150,9 @@
         <label><span>Deadline <span class="opt">optional</span></span><input name="deadline" placeholder="e.g. end of month"></label>
       </div>
       <label>Project details<textarea name="message" rows="5" required placeholder="What it is, length or word count, and anything I should know. I’ll share a Google Drive folder for your files."></textarea></label>
-      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn" type="submit">Send inquiry</button>
+      <p class="form-sub">Opens your email app with your details filled in.</p>
       <p class="form-note" id="form-note" role="status"></p>
     </form>
   </div>
@@ -200,26 +199,17 @@
     a.addEventListener('click', function () { document.getElementById('service').value = a.dataset.service; });
   });
 
-  // Inquiry form: Formspree when configured, otherwise a pre-filled email.
+  // Inquiry form: opens the visitor's email app with everything pre-filled.
   (function () {
     var f = document.getElementById('inquiry'), note = document.getElementById('form-note');
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var d = new FormData(f);
-      if (d.get('_gotcha')) return;
-      if (f.action.indexOf('YOUR_FORM_ID') > -1) {
-        var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nService: ' + d.get('service') +
-          '\nBudget: ' + (d.get('budget') || 'Not sure') + '\nDeadline: ' + (d.get('deadline') || '-') + '\n\n' + d.get('message');
-        location.href = 'mailto:stoissbusiness@pm.me?subject=' + encodeURIComponent('Project inquiry: ' + d.get('service')) + '&body=' + encodeURIComponent(body);
-        return;
-      }
-      note.textContent = 'Sending…';
-      fetch(f.action, { method: 'POST', body: d, headers: { Accept: 'application/json' } })
-        .then(function (r) {
-          if (!r.ok) throw 0;
-          f.reset(); note.textContent = 'Thanks! Your message is on its way. I’ll get back to you soon.';
-        })
-        .catch(function () { note.textContent = 'Something went wrong. Please email stoissbusiness@pm.me directly.'; });
+      if (d.get('website')) return;
+      var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nService: ' + d.get('service') +
+        '\nBudget: ' + (d.get('budget') || 'Not sure') + '\nDeadline: ' + (d.get('deadline') || '-') + '\n\n' + d.get('message');
+      location.href = 'mailto:stoissbusiness@pm.me?subject=' + encodeURIComponent('Project inquiry: ' + d.get('service')) + '&body=' + encodeURIComponent(body);
+      note.textContent = 'Your email app should open with everything filled in. If nothing happens, email stoissbusiness@pm.me directly.';
     });
   })();
 

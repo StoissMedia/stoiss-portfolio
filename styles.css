@@ -308,6 +308,7 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .form .btn{justify-self:start;margin-top:4px;cursor:pointer;font-family:inherit}
 .hint{margin:-4px 0 0;padding:12px 14px;border:1px solid var(--line-2);border-left:2px solid var(--accent);border-radius:8px;font-size:.86rem;color:var(--muted);line-height:1.5}
 .hint strong{color:var(--text);font-weight:500}
+.form-sub{margin-top:-6px;font-size:.8rem;color:var(--faint)}
 .form-note{font-size:.88rem;color:var(--accent);min-height:1em}
 .hp{position:absolute;left:-9999px}
 
@@ -354,6 +355,12 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .kinds li.hl{border-color:var(--line-2);background:linear-gradient(180deg,rgba(217,199,163,.05),transparent 60%),var(--bg-2)}
 .kinds h3{font-size:1.1rem;letter-spacing:-.015em;margin-bottom:10px}
 .kinds p{font-size:.92rem;color:var(--muted)}
+
+.and-more{margin-top:24px;font-size:1rem;color:var(--muted)}
+.and-more em{font-size:1.2rem;margin-right:4px}
+
+.role-static{margin-bottom:48px}
+.role-static:hover{border-color:var(--line);background:transparent}
 
 /* Footer */
 .footer{border-top:1px solid var(--line);padding:28px 0}
