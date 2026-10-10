@@ -12,7 +12,7 @@ Replace the repo contents with these files and push. `CNAME` keeps the custom do
 3. **Check the claims:** "reply within a day", free-test sizes.
 4. `pricing-mockup.html` is a private draft (it has your hourly notes). It is NOT in the upload zip; don't push it.
 
-## Pages (v25)
+## Pages (v26)
 - `index.html`: home (hero, services, proof, rates teaser, about, FAQ, contact)
 - `video-editing.html`: full editing rates and scope rules
 - `voiceover.html`: voice page (rates placeholder: "quoted per project")
