@@ -453,3 +453,12 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
   .addons li{padding:14px 14px}
   .sub-head{margin-top:52px}
 }
+
+/* v28: keyword line inside H1, language switch, footer links */
+.h1-kw{display:block;font-family:var(--sans);line-height:1.5;margin-bottom:22px;max-width:none}
+.lang-switch{margin-top:22px;font-size:.88rem;color:var(--muted)}
+.lang-switch .link{margin-left:4px}
+.foot-links{flex-basis:100%;order:3;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-top:18px;border-top:1px solid var(--line);font-size:.82rem}
+.foot-links .label{margin-right:4px}
+.foot-links a{color:var(--muted);transition:color .2s}
+.foot-links a:hover{color:var(--text)}

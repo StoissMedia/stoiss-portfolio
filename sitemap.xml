@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://stoiss.dk/</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://stoiss.dk/video-editing.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://stoiss.dk/voiceover.html</loc><lastmod>2026-10-08</lastmod></url>
-  <url><loc>https://stoiss.dk/localization.html</loc><lastmod>2026-10-08</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://stoiss.dk/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://stoiss.dk/video-editing.html</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://stoiss.dk/voiceover.html</loc><lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoiss.dk/voiceover.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://stoiss.dk/da/speak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoiss.dk/voiceover.html"/>
+  </url>
+  <url><loc>https://stoiss.dk/localization.html</loc><lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoiss.dk/localization.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://stoiss.dk/da/oversaettelse.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoiss.dk/localization.html"/>
+  </url>
+  <url><loc>https://stoiss.dk/twitch-highlight-editor.html</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://stoiss.dk/audiobook-narrator.html</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://stoiss.dk/danish-game-localization.html</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://stoiss.dk/da/speak.html</loc><lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoiss.dk/voiceover.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://stoiss.dk/da/speak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoiss.dk/voiceover.html"/>
+  </url>
+  <url><loc>https://stoiss.dk/da/oversaettelse.html</loc><lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoiss.dk/localization.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://stoiss.dk/da/oversaettelse.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoiss.dk/localization.html"/>
+  </url>
 </urlset>
