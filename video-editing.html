@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=46">
+  <link rel="stylesheet" href="styles.css?v=48">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -88,6 +88,7 @@
         <h3>Magoroku, MandaPandaCrafts, IrishDev13 &amp; RoseyDisposition</h3>
         <p>The ongoing editor for all four channels, plus other retained editing work under NDA.</p>
         <p class="who-links role-links"><a href="https://www.twitch.tv/magoroku" target="_blank" rel="noopener">Magoroku ↗</a><a href="https://www.youtube.com/@MandaPandaCrafts" target="_blank" rel="noopener">MandaPandaCrafts ↗</a><a href="https://www.twitch.tv/irishdev13" target="_blank" rel="noopener">IrishDev13 ↗</a><a href="https://www.twitch.tv/roseydisposition" target="_blank" rel="noopener">RoseyDisposition ↗</a></p>
+        <p class="role-past"><span class="label">Previously</span>Thorlar</p>
       </div>
     </div>
 
@@ -157,6 +158,32 @@
           <img src="https://i.ytimg.com/vi/L4IYLbfLoGo/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play" aria-hidden="true"></span>
         </button>
         <p class="ch">Stoiss</p><h3>Chessarama: So You Thought You Knew Chess</h3>
+      </li>
+    </ul>
+
+    <!-- SHORTS: vertical click-to-play. To add one, copy a <li class="card short-card"> block and change data-id (the code after /shorts/ in the link) in both places. -->
+    <div class="sub-head">
+      <h3>Shorts</h3>
+      <p>Vertical edits for YouTube Shorts, TikTok and Reels.</p>
+    </div>
+    <ul class="shorts">
+      <li class="card short-card">
+        <button class="yt yt-short" data-id="SeDBoB4-Ejc" aria-label="Play: Magoroku short">
+          <img src="https://i.ytimg.com/vi/SeDBoB4-Ejc/oar2.jpg" alt="" loading="lazy" width="1080" height="1920"><span class="play" aria-hidden="true"></span>
+        </button>
+        <p class="ch">YouTube Short</p><h3>Magoroku</h3>
+      </li>
+      <li class="card short-card">
+        <button class="yt yt-short" data-id="pdRjvRpIhyc" aria-label="Play: MandaPandaCrafts short">
+          <img src="https://i.ytimg.com/vi/pdRjvRpIhyc/oar2.jpg" alt="" loading="lazy" width="1080" height="1920"><span class="play" aria-hidden="true"></span>
+        </button>
+        <p class="ch">YouTube Short</p><h3>MandaPandaCrafts</h3>
+      </li>
+      <li class="card short-card">
+        <button class="yt yt-short" data-id="c456GxUHOdc" aria-label="Play: Thorlar short">
+          <img src="https://i.ytimg.com/vi/c456GxUHOdc/oar2.jpg" alt="" loading="lazy" width="1080" height="1920"><span class="play" aria-hidden="true"></span>
+        </button>
+        <p class="ch">YouTube Short</p><h3>Thorlar</h3>
       </li>
     </ul>
 
@@ -429,6 +456,7 @@
     });
     img.addEventListener('error', function () {
       if (img.src.indexOf('maxresdefault') > -1) img.src = img.src.replace('maxresdefault', 'hqdefault');
+      else if (img.src.indexOf('oar2') > -1) img.src = img.src.replace('oar2', 'hqdefault');
       else img.style.visibility = 'hidden';
     });
     b.addEventListener('click', function () {

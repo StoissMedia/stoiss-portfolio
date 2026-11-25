@@ -498,3 +498,12 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .tw:hover .play{background:rgba(11,11,12,.85);transform:translate(-50%,-50%) scale(1.06)}
 .tw .play{background:rgba(145,70,255,.55);border-color:rgba(255,255,255,.4)}
 .tw:hover .play{background:rgba(145,70,255,.85)}
+
+/* v47: shorts row + past clients */
+.shorts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:28px 20px}
+.yt-short{aspect-ratio:9/16}
+.short-card iframe{aspect-ratio:9/16}
+.role-past{margin-top:14px;font-size:.9rem}
+.role-past .label{margin-right:12px}
+@media (max-width:1000px){.shorts{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.shorts{grid-template-columns:repeat(2,1fr);gap:24px 12px}}
