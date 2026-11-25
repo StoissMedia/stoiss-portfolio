@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/headshot.webp">
-  <link rel="stylesheet" href="styles.css?v=29">
+  <link rel="stylesheet" href="styles.css?v=31">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -215,8 +215,8 @@
 </section>
 
 <!-- TESTIMONIALS
-     Each client is one <li class="testi">. A card with the "hidden" attribute is not shown on the site.
-     To publish one: paste the quote into its <p>, then delete the word  hidden  from its <li>.
+     Each client is one <li class="testi">. A card with class "testi pending" shows "Testimonial coming soon." in muted text.
+     To publish one: paste the quote into its <p>, then change class="testi pending" to class="testi".
      To add a new client: copy a whole <li class="testi"> ... </li> block and edit it.
      Logos go in assets/clients/ (a wide banner crop works best). Delete the <img> line if there is no logo. -->
 <section class="section" id="testimonials">
@@ -234,17 +234,26 @@
         </blockquote>
         <p class="who"><strong>Magoroku</strong><span>YouTuber and Twitch Streamer</span><span class="label">Video editing</span><span class="who-links"><a href="https://www.twitch.tv/magoroku" target="_blank" rel="noopener">Twitch ↗</a><a href="https://www.youtube.com/@Magoroku" target="_blank" rel="noopener">YouTube ↗</a></span></p>
       </li>
-      <li class="testi" hidden>
+      <li class="testi pending">
+        <!-- PLACEHOLDER: replace the text below with Rosey's quote and remove " pending" from the class above. -->
         <blockquote>
-          <p>PENDING: Rosey's quote goes here.</p>
+          <p>Testimonial coming soon.</p>
         </blockquote>
         <p class="who"><strong>Rosey</strong><span>Twitch Streamer</span><span class="label">Video editing</span></p>
       </li>
-      <li class="testi" hidden>
+      <li class="testi pending">
+        <!-- PLACEHOLDER: replace the text below with IrishDev13's quote and remove " pending" from the class above. -->
         <blockquote>
-          <p>PENDING: IrishDev13's quote goes here.</p>
+          <p>Testimonial coming soon.</p>
         </blockquote>
         <p class="who"><strong>IrishDev13</strong><span>Twitch Streamer</span><span class="label">Video editing</span></p>
+      </li>
+          <li class="testi pending">
+        <!-- PLACEHOLDER: replace the text below with Phil's quote and remove " pending" from the class above. -->
+        <blockquote>
+          <p>Testimonial coming soon.</p>
+        </blockquote>
+        <p class="who"><strong>Phil</strong><span>Lead Developer, Non Nobis Games</span><span class="label">Translation &amp; localization</span><span class="who-links"><a href="https://non-nobis-games.com/" target="_blank" rel="noopener">Non Nobis Games ↗</a></span></p>
       </li>
     </ul>
   </div>

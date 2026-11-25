@@ -466,6 +466,8 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
 .testi{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:26px 26px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
 .testi[hidden]{display:none}
+.testi.pending blockquote p{color:var(--faint);font-style:italic}
+.testi.pending blockquote::before{opacity:.35}
 .testi-logo{width:calc(100% + 52px);max-width:none;margin:-26px -26px 0;aspect-ratio:800/213;object-fit:cover;border-radius:var(--r) var(--r) 0 0;border-bottom:1px solid var(--line)}
 .testi blockquote{margin:0;position:relative;padding-top:28px}
 .testi blockquote::before{content:"\201C";position:absolute;top:-14px;left:-2px;font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--accent)}
