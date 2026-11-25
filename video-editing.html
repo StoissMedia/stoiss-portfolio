@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=37">
+  <link rel="stylesheet" href="styles.css?v=39">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -170,6 +170,8 @@
      Each client is one <li class="testi">. A card with class "testi pending" shows "Testimonial coming soon." in muted text.
      To publish one: paste the quote into its <p>, then change class="testi pending" to class="testi".
      To add a new client: copy a whole <li class="testi"> ... </li> block and edit it.
+     Order = priority. Only the first 6 cards show here; with more than 6, a "See all testimonials" button appears automatically.
+     Every testimonial also goes on testimonials.html (the full list).
      Logos go in assets/clients/ (a wide banner crop works best). Delete the <img> line if there is no logo. -->
 <section class="section" id="testimonials">
   <div class="wrap">
@@ -396,6 +398,7 @@
     </nav>
 <nav class="foot-links" aria-label="More">
       <span class="label">More</span>
+      <a href="testimonials.html">Testimonials</a>
       <a href="twitch-highlight-editor.html">Twitch highlight editing</a>
       <a href="audiobook-narrator.html">Audiobook narration</a>
       <a href="danish-game-localization.html">Game localization &amp; LQA</a>
@@ -446,6 +449,22 @@
   })();
 
   document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script>
+  // Testimonials: show the first 6 cards (HTML order = priority). If there are more,
+  // the rest are hidden here and a button links to the full testimonials page.
+  document.querySelectorAll('.quotes:not([data-all])').forEach(function (list) {
+    var LIMIT = 6;
+    var cards = [].filter.call(list.children, function (li) { return !li.hidden; });
+    if (cards.length <= LIMIT) return;
+    cards.slice(LIMIT).forEach(function (li) { li.classList.add('testi-more'); });
+    list.classList.add('is-collapsed');
+    var a = document.createElement('a');
+    a.className = 'btn btn-ghost quotes-toggle';
+    a.href = list.getAttribute('data-all-href') || 'testimonials.html';
+    a.textContent = 'See all testimonials →';
+    list.after(a);
+  });
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4b6c99f902d043ec9ddbfc9294b5acd5"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
