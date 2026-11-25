@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=48">
+  <link rel="stylesheet" href="styles.css?v=50">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -161,7 +161,8 @@
       </li>
     </ul>
 
-    <!-- SHORTS: vertical click-to-play. To add one, copy a <li class="card short-card"> block and change data-id (the code after /shorts/ in the link) in both places. -->
+    <!-- SHORTS: vertical click-to-play. YouTube: copy a yt-short block and change data-id (the code after /shorts/) in both places.
+         TikTok: copy a tt block and change data-tt (the number after /video/) and the link. -->
     <div class="sub-head">
       <h3>Shorts</h3>
       <p>Vertical edits for YouTube Shorts, TikTok and Reels.</p>
@@ -178,6 +179,20 @@
           <img src="https://i.ytimg.com/vi/pdRjvRpIhyc/oar2.jpg" alt="" loading="lazy" width="1080" height="1920"><span class="play" aria-hidden="true"></span>
         </button>
         <p class="ch">YouTube Short</p><h3>MandaPandaCrafts</h3>
+      </li>
+      <li class="card short-card">
+        <button class="tt" data-tt="7346596498832018734" aria-label="Play: IrishDev13 TikTok">
+          <span class="tt-badge" aria-hidden="true">TikTok</span>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <p class="ch">TikTok · <a class="link" href="https://www.tiktok.com/@irishdev13/video/7346596498832018734" target="_blank" rel="noopener">open ↗</a></p><h3>IrishDev13</h3>
+      </li>
+      <li class="card short-card">
+        <button class="tt" data-tt="7349683206754487582" aria-label="Play: MandaPandaCrafts TikTok">
+          <span class="tt-badge" aria-hidden="true">TikTok</span>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <p class="ch">TikTok · <a class="link" href="https://www.tiktok.com/@manda_panda_crafts/video/7349683206754487582" target="_blank" rel="noopener">open ↗</a></p><h3>MandaPandaCrafts</h3>
       </li>
       <li class="card short-card">
         <button class="yt yt-short" data-id="c456GxUHOdc" aria-label="Play: Thorlar short">
@@ -201,6 +216,10 @@
         <p>The trailer for IrishDev13’s Twitch channel, one of my ongoing editing clients. Press play to watch it here, or <a class="link" href="https://www.twitch.tv/videos/1454157276" target="_blank" rel="noopener">open it on Twitch ↗</a></p>
       </div>
     </article>
+    <a class="twitch" href="https://www.youtube.com/@StoissMedia" target="_blank" rel="noopener">
+      <span><span class="label">YouTube</span>More from my portfolio on the Stoiss Media YouTube channel</span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
   </div>
 </section>
 
@@ -475,6 +494,17 @@
       f.src = 'https://player.twitch.tv/?video=' + b.dataset.video + '&parent=' + (location.hostname || 'stoiss.dk') + '&autoplay=true';
       f.title = b.getAttribute('aria-label').replace('Play: ', '');
       f.allow = 'autoplay; fullscreen';
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+    });
+  });
+  // Click-to-play TikTok: loads TikTok's player only when pressed.
+  document.querySelectorAll('.tt').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.tiktok.com/player/v1/' + b.dataset.tt + '?autoplay=1&rel=0';
+      f.title = b.getAttribute('aria-label').replace('Play: ', '');
+      f.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
       f.allowFullscreen = true;
       b.replaceWith(f);
     });

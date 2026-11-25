@@ -507,3 +507,13 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .role-past .label{margin-right:12px}
 @media (max-width:1000px){.shorts{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:720px){.shorts{grid-template-columns:repeat(2,1fr);gap:24px 12px}}
+
+/* v49: TikTok click-to-play */
+.tt{position:relative;display:block;width:100%;padding:0;border:0;cursor:pointer;aspect-ratio:9/16;overflow:hidden;border-radius:10px;color:var(--text);
+  background:radial-gradient(90% 60% at 20% 15%,rgba(37,244,238,.18),transparent 60%),radial-gradient(90% 60% at 85% 85%,rgba(254,44,85,.2),transparent 60%),#0d0d0f}
+.tt-badge{position:absolute;left:12px;top:12px;padding:4px 10px;border-radius:999px;background:#000;border:1px solid rgba(255,255,255,.2);font-size:.72rem;font-weight:600;letter-spacing:.04em}
+.tt:hover .play{background:rgba(11,11,12,.85);transform:translate(-50%,-50%) scale(1.06)}
+.card .ch .link{font-size:inherit}
+
+/* v50 */
+.see-all{display:flex;flex-wrap:wrap;gap:10px 28px}
