@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=56">
+  <link rel="stylesheet" href="styles.css?v=58">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -241,6 +241,32 @@
   });
 
   document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script>
+  // Testimonials: long quotes are cut to a few lines with a "Read more" button that expands them in the card.
+  (function () {
+    var LINES = 6;
+    document.querySelectorAll('.testi blockquote').forEach(function (q) {
+      var p = q.querySelector('p'); if (!p) return;
+      var lh = parseFloat(getComputedStyle(p).lineHeight) || 24;
+      var pad = parseFloat(getComputedStyle(q).paddingTop) || 0;
+      var max = Math.round(pad + lh * LINES);
+      if (q.scrollHeight <= max + lh) return;   // short enough: leave it alone
+      q.classList.add('clamp'); q.style.maxHeight = max + 'px';
+      if (!q.id) q.id = 'q' + Math.random().toString(36).slice(2, 8);
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'read-more';
+      b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', q.id);
+      b.textContent = 'Read more';
+      b.addEventListener('click', function () {
+        var open = q.classList.toggle('open');
+        q.style.maxHeight = open ? q.scrollHeight + 'px' : max + 'px';
+        b.textContent = open ? 'Show less' : 'Read more';
+        b.setAttribute('aria-expanded', String(open));
+      });
+      q.after(b);
+    });
+  })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4b6c99f902d043ec9ddbfc9294b5acd5"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
