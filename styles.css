@@ -464,7 +464,7 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 
 /* v29: testimonials */
 .quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
-.testi{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:26px 26px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
+.testi{display:flex;flex-direction:column;gap:24px;padding:26px 26px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
 .testi[hidden]{display:none}
 .testi.pending blockquote p{color:var(--faint);font-style:italic}
 .testi.pending blockquote::before{opacity:.35}
@@ -473,7 +473,7 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .testi blockquote::before{content:"\201C";position:absolute;top:-14px;left:-2px;font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--accent)}
 .testi blockquote p{font-size:.95rem;line-height:1.6}
 .testi blockquote p+p{margin-top:10px}
-.who{display:flex;flex-direction:column;gap:2px;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem}
+.who{display:flex;flex-direction:column;gap:2px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem}
 .who span:not(.label){color:var(--muted)}
 .who .label{margin-top:10px}
 .who-links{display:flex;gap:16px;margin-top:8px}
