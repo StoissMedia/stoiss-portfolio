@@ -517,3 +517,5 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 
 /* v50 */
 .see-all{display:flex;flex-wrap:wrap;gap:10px 28px}
+.tt-out{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-size:.82rem;color:var(--muted)}
+a.tt:hover .tt-out{color:var(--text)}
