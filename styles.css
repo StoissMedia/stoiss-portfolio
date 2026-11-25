@@ -475,7 +475,7 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .testi.pending blockquote::before{opacity:.35}
 .testi-logo{width:calc(100% + 52px);max-width:none;margin:-26px -26px 0;aspect-ratio:800/213;object-fit:cover;border-radius:var(--r) var(--r) 0 0;border-bottom:1px solid var(--line)}
 .testi blockquote{margin:0;position:relative;padding-top:32px}
-.testi blockquote::before{content:"\201C";position:absolute;top:-2px;left:-2px;font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--accent)}
+.testi blockquote::before{content:"\201C";position:absolute;top:0;left:3px;font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--accent)}
 .testi blockquote p{font-size:.95rem;line-height:1.6}
 .testi blockquote p+p{margin-top:10px}
 .who{display:flex;flex-direction:column;gap:2px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem}
@@ -521,7 +521,7 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 a.tt:hover .tt-out{color:var(--text)}
 
 /* v57: Read more on long testimonials */
-.testi blockquote.clamp{overflow:hidden;transition:max-height .35s ease;-webkit-mask-image:linear-gradient(#000 calc(100% - 3.2em),transparent);mask-image:linear-gradient(#000 calc(100% - 3.2em),transparent)}
-.testi blockquote.clamp.open{-webkit-mask-image:none;mask-image:none}
+.testi blockquote.clamp{overflow:hidden;padding-left:4px;margin-left:-4px;transition:max-height .35s ease;-webkit-mask-image:linear-gradient(#000 calc(100% - 3.2em),transparent);mask-image:linear-gradient(#000 calc(100% - 3.2em),transparent)}
+.testi blockquote.clamp.open{-webkit-mask-image:none;mask-image:none;overflow:visible}
 .read-more{align-self:flex-start;margin-top:-10px;padding:0;border:0;background:none;color:var(--text);font:inherit;font-size:.88rem;cursor:pointer;border-bottom:1px solid var(--line-2);padding-bottom:1px;transition:border-color .2s}
 .read-more:hover{border-color:var(--accent)}
