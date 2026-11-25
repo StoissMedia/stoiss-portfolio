@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="styles.css?v=45">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,10 +160,20 @@
       </li>
     </ul>
 
-    <a class="twitch" href="https://www.twitch.tv/videos/1454157276" target="_blank" rel="noopener">
-      <span><span class="label">Twitch</span>Stream edit, watch on Twitch</span>
-      <span class="arrow" aria-hidden="true">↗</span>
-    </a>
+    <!-- TWITCH VIDEO: click-to-play, loads Twitch's player only when pressed.
+         Change data-video to another Twitch video ID to swap the video. -->
+    <article class="feature-video tw-feature">
+      <button class="tw" data-video="1454157276" aria-label="Play: IrishDev13 channel trailer">
+        <img src="assets/clients/irishdev13-cover.jpg" alt="" loading="lazy" width="1280" height="720">
+        <span class="tw-badge" aria-hidden="true">Twitch</span>
+        <span class="play" aria-hidden="true"></span>
+      </button>
+      <div class="meta">
+        <p class="label">Featured · IrishDev13 · Twitch</p>
+        <h3>IrishDev13 channel trailer</h3>
+        <p>The trailer for IrishDev13’s Twitch channel, one of my ongoing editing clients. Press play to watch it here, or <a class="link" href="https://www.twitch.tv/videos/1454157276" target="_blank" rel="noopener">open it on Twitch ↗</a></p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -426,6 +436,17 @@
       f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
       f.title = b.getAttribute('aria-label').replace('Play: ', '');
       f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+    });
+  });
+  // Click-to-play Twitch video: loads the player only when asked. Twitch requires the site's domain as "parent".
+  document.querySelectorAll('.tw').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://player.twitch.tv/?video=' + b.dataset.video + '&parent=' + (location.hostname || 'stoiss.dk') + '&autoplay=true';
+      f.title = b.getAttribute('aria-label').replace('Play: ', '');
+      f.allow = 'autoplay; fullscreen';
       f.allowFullscreen = true;
       b.replaceWith(f);
     });
