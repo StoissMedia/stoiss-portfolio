@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/headshot.webp">
-  <link rel="stylesheet" href="styles.css?v=28">
+  <link rel="stylesheet" href="styles.css?v=29">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,12 +54,12 @@
 
 <header class="header">
   <div class="wrap header-in">
-    <a class="brand" href="index.html" aria-label="Stoiss Media, home">Stoiss<span>Media</span></a>
+    <a class="brand" href="./" aria-label="Stoiss Media, home">Stoiss<span>Media</span></a>
     <nav class="nav" aria-label="Main">
       <a href="video-editing.html">Video editing</a>
       <a href="voiceover.html">Voiceover</a>
       <a href="localization.html">Translation</a>
-      <a href="index.html#about">About</a>
+      <a href="./#about">About</a>
     </nav>
     <a class="btn btn-sm" href="#contact">Get in touch</a>
   </div>
@@ -210,6 +210,40 @@
       <li class="logo"><img src="assets/logos/ghost-exile.jpg" alt="Ghost Exile" loading="lazy" data-fallback="assets/logos/ghost-exile.png"><span>Ghost Exile</span></li>
       <li class="logo"><img src="assets/logos/ghost-watchers.jpg" alt="Ghost Watchers" loading="lazy" data-fallback="assets/logos/ghost-watchers.png"><span>Ghost Watchers</span></li>
       <li class="logo"><img src="assets/logos/the-shivers.jpg" alt="The Shivers" loading="lazy" data-fallback="assets/logos/the-shivers.png"><span>The Shivers</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIALS
+     Each client is one <li class="testi">. A card with the "hidden" attribute is not shown on the site.
+     To publish one: paste the quote into its <p>, then delete the word  hidden  from its <li>.
+     To add a new client: copy a whole <li class="testi"> ... </li> block and edit it. -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label">Testimonials</p>
+      <h2>In their <em>own words.</em></h2>
+    </header>
+    <ul class="quotes">
+      <li class="testi">
+        <blockquote>
+          <p>Stoiss works hard and is not shy about steering you in a better direction for your content. If he suggests something really consider what he is advising!</p>
+          <p>Great under pressure and as far as I can remember never missed a deadline and even zoomed through some last minute rush tasks given to him!</p>
+        </blockquote>
+        <p class="who"><strong>Magoroku</strong><span>YouTuber and Twitch Streamer</span><span class="label">Video editing</span></p>
+      </li>
+      <li class="testi" hidden>
+        <blockquote>
+          <p>PENDING: Rosey's quote goes here.</p>
+        </blockquote>
+        <p class="who"><strong>Rosey</strong><span>Twitch Streamer</span><span class="label">Video editing</span></p>
+      </li>
+      <li class="testi" hidden>
+        <blockquote>
+          <p>PENDING: IrishDev13's quote goes here.</p>
+        </blockquote>
+        <p class="who"><strong>IrishDev13</strong><span>Twitch Streamer</span><span class="label">Video editing</span></p>
+      </li>
     </ul>
   </div>
 </section>

@@ -84,10 +84,9 @@ h1 em{font-size:1.06em}
 
 /* Services */
 .services{border-top:1px solid var(--line)}
-.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.svc{list-style:none;margin:0 -24px;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
 .svc li+li{border-left:1px solid var(--line)}
-.svc a{display:block;height:100%;padding:34px 28px 36px;transition:background .25s}
-.svc li:first-child a{padding-left:0}
+.svc a{display:block;height:100%;padding:34px 24px 36px;transition:background .25s}
 .svc a:hover{background:var(--bg-2)}
 .svc .n{display:block;font-size:.75rem;color:var(--faint);margin-bottom:28px;font-variant-numeric:tabular-nums}
 .svc h2{font-size:1.2rem;letter-spacing:-.015em;margin-bottom:10px}
@@ -410,7 +409,7 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
   .portrait{max-width:340px}
   .portrait img{aspect-ratio:1/1}
   .lead{font-size:1.02rem}
-  .svc{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr;margin:0}
   .svc li+li{border-left:0;border-top:1px solid var(--line)}
   .svc a{padding:24px 0}
   .svc .n{margin-bottom:12px}
@@ -462,3 +461,16 @@ iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;ba
 .foot-links .label{margin-right:4px}
 .foot-links a{color:var(--muted);transition:color .2s}
 .foot-links a:hover{color:var(--text)}
+
+/* v29: testimonials */
+.quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.testi{display:flex;flex-direction:column;justify-content:space-between;gap:28px;padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
+.testi[hidden]{display:none}
+.testi blockquote{margin:0;position:relative;padding-top:34px}
+.testi blockquote::before{content:"\201C";position:absolute;top:-14px;left:-2px;font-family:var(--serif);font-size:4rem;line-height:1;color:var(--accent)}
+.testi blockquote p{font-size:1.08rem;line-height:1.6;max-width:62ch}
+.testi blockquote p+p{margin-top:12px}
+.who{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding-top:20px;border-top:1px solid var(--line);font-size:.92rem}
+.who span:not(.label){color:var(--muted)}
+.who .label{margin-left:auto}
+@media (max-width:720px){.quotes{grid-template-columns:1fr}.testi{padding:24px}}
